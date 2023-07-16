@@ -1,0 +1,33 @@
+{
+  "name": "photon",
+  "version": "1.0.0",
+  "description": "The signers for Photon Bridge.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/photon-bridge/signer-node.git"
+  },
+  "author": "Yunus Gürlek",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.4",
+    "body-parser": "^1.20.1",
+    "cluster": "^0.7.7",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.10.4",
+    "node-fetch": "^2.6.9",
+    "os": "^0.1.2",
+    "snarkyjs": "^0.12.1",
+    "validator": "^13.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/photon-bridge/signer-node/issues"
+  },
+  "homepage": "https://github.com/photon-bridge/signer-node#readme"
+}
