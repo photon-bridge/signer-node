@@ -1,3 +1,7 @@
+const snarkyjs = require('snarkyjs');
+
+const Field = snarkyjs.Field;
+
 const FORMATTED_CHAR_LENGTH = 4;
 
 // Add extra 0 to the left of the char code if it's length is less than FORMATTED_CHAR_LENGTH
@@ -25,5 +29,5 @@ module.exports = str => {
     resultString += formatChar(formatCharCode(char.charCodeAt(0)));
   });
 
-  return BigInt(resultString);
+  return BigInt(resultString) % Field.ORDER;
 }
