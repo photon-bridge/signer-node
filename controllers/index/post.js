@@ -24,7 +24,7 @@ module.exports = (req, res) => {
   if (!commitment || typeof commitment != 'string' || !commitment.trim().length)
     return res.json({ success: false, error: 'bad_request' });
 
-  checkCelestiacommitmentPoint({
+  checkCelestiaBlock({
     height,
     namespace,
     commitment
