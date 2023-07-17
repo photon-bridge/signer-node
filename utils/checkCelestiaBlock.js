@@ -16,7 +16,7 @@ module.exports = (data, callback) => {
     return res.json({ success: false, error: 'bad_request' });
 
   fetch('http://localhost:26658', {
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': process.env.CELESTIA_AUTHORIZATION_KEY
@@ -33,13 +33,14 @@ module.exports = (data, callback) => {
     })
   })
     .then(res => res.json())
-    .then(response => {
-      const res = response.Response;
-
+    .then(res => {
       if (res.error || !res.result?.length)
         return callback(null, false);
 
       return callback(null, true);
     })
-    .catch(_ => callback('fetch_error'));
+    .catch(err => {
+      console.log(err);
+      callback('fetch_error')
+    });
 }
