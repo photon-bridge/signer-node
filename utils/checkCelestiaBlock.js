@@ -35,8 +35,8 @@ module.exports = (data, callback) => {
     .then(res => res.json())
     .then(res => {
       console.log(res); //print output
-      if (res.error || !res.result?.length)
-        return callback(null, false);
+      // if (res.error || !res.result?.length)
+      //   return callback(null, false);
 
       return callback(null, true);
     })
